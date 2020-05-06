@@ -31,7 +31,7 @@ function handleClick() {
     if (inputValue) {
     // Apply `filter` to the table data to only keep the
     // rows where the data value matches the filter value
-    filteredData = filteredData.filter(row => row.category === inputValue);
+    filteredData = filteredData.filter(row => row[category] === inputValue);
     }
   };
   
@@ -40,15 +40,10 @@ function handleClick() {
   // @NOTE: If no date was entered, then filteredData will
   // just be the original tableData.
   let filteredData = tableData;
-  //var categories = [datetime, city, state, country, shape]
-  //categories.forEach(i => inputFilter(i));
-  
-  inputFilter(datetime);
-  inputFilter(city);
-  inputFilter(state);
-  inputFilter(country);
-  inputFilter(shape);
-  
+  var categories = ["datetime", "city", "state", "country", "shape"]
+  categories.forEach(i => inputFilter(i));
+
+
   buildTable(filteredData);
 };
 

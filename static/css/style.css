@@ -7,3 +7,8 @@ body {
     background-size: 100% 100%;
     text-align: center;
   }
+
+  .input-class{
+    text-align: left;
+    float: right;
+  }
